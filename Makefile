@@ -1,4 +1,4 @@
-TARGET = hello
+TARGET = hello.exe
 PREFIX = education_build/bin
 
 .PHONY: all clean install uninstall
@@ -6,7 +6,7 @@ PREFIX = education_build/bin
 all:	$(TARGET)
 
 clean:
-	rm -rf $(TARGET) *.o
+	rm -rf $(PREFIX)/*
 
 main.o:	main.cpp
 	g++ -c -o $(PREFIX)/main.o main.cpp

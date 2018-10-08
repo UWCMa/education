@@ -3,3 +3,4 @@
 
 # no .o files
 *.o
+*.exe
