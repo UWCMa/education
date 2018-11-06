@@ -1,10 +1,14 @@
 #include <iostream>
-//#include "education/commonTypes.hpp"
+#include "education/include/commonTypes.hpp"
 
 int main()
 {
-	//std::cout << someType::NO << std::endl;
-	std::cout << "ma457e45y46yin.cpdp " << std::endl;
+
+	int x = 0;
+	auto f = [&x](){x = 5;};
+    f();
+
+	std::cout << "hello " << x << "enum = " << commonTypes::someType::ONE << std::endl;
 	
 	return 0;
 }
