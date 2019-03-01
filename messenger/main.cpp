@@ -1,10 +1,17 @@
-#include <iostream>
+#include "ViewHandler.h"
+#include "common/timeserver.h"
 
-int main()
+
+int main(int argc, char **argv)
 {
-	std::cout << "Messenger" << std::endl;
-	int x = 0;
-	std::cin >> x;
-	return 0;
-    
+	ViewHandler viewHandler;
+	viewHandler.init(argc, argv);
+
+
+	glutTimeserver::setHandler(&viewHandler);
+	glutDisplayFunc(glutTimeserver::displayFunc);
+	glutReshapeFunc(glutTimeserver::reshapeFunc);
+	glutMainLoop();
+
+	return 0;   
 }
