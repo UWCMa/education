@@ -17,10 +17,6 @@ public:
 	void execute();
 	void reshape(int w, int h);
 
-	//for calling glut
-	//static void displayFunc() { execute(); }
-	//static void reshapeFunc(int w, int h);
 private:
-
 	MainWindow mMainWindow;
 };

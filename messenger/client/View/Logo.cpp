@@ -43,7 +43,8 @@ void Logo::display()const
 	/* then two stippled rectangles */
 	glEnable(GL_POLYGON_STIPPLE);
 	glPolygonStipple(fly.data());
-	glRectf(32.0, 0.0, 0.0, 32.0);
+   std::cout << "first = " << getWindowSize().first << " second = " << getWindowSize().second << std::endl;
+	glRectf(200.0, 400.0, 0.0, 200.0);
 
 	glDisable(GL_POLYGON_STIPPLE);
 }

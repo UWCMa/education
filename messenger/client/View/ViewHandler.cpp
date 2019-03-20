@@ -23,7 +23,7 @@ void ViewHandler::init(int argc, char **argv)
 void ViewHandler::execute()
 {
 	std::cout << "ViewHandler execute" << std::endl;
-	//glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT);
 	mMainWindow.display();
 	glFlush();
 }

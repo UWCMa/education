@@ -1,6 +1,7 @@
 #pragma once
+#include "common/BaseView.h"
 
-class Logo
+class Logo	: public BaseView
 {
 public:
 	Logo();

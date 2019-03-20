@@ -28,17 +28,17 @@ void MainWindow::init()
 void MainWindow::display() const
 {
 	std::cout << "MainWindow draw" << std::endl;
-	
 	mLogo.display();
-	
 }
 
 void MainWindow::reshape(int w, int h)
 {
-	std::cout << "reshape w = " << w << " h = " << h << std::endl;
+	std::cout << "MainWindow reshape w = " << w << " h = " << h << std::endl;
 	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(0.0, (GLdouble)w, 0.0, (GLdouble)h);
+
+	BaseView::reshape(w, h);
 	mLogo.reshape(w, h);
 }
