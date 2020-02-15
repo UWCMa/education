@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Debug",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/"
+            },
+            "command": "CMake",
+            "args": [
+                     "-G",
+                     "'NMake Makefiles'",
+                     "-DCMAKE_BUILD_TYPE=Debug",
+                     "-B",
+                     "build"
+                    ]
+        },
+        {
+            "label": "CMake VS2019",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/"
+            },
+            "command": "cmake",
+            "args": [
+                    "-S",
+                    ".",
+                    "-B",
+                    "build",
+            ]
+        },
+        {
+            "label": "CMake Release",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "CMake",
+            "args": [
+                     "-G",
+                     "'NMake Makefiles'",
+                     "-DCMAKE_BUILD_TYPE=Release",
+                     ".."
+                    ]
+        },
+        {
+            "label": "Make",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "nmake",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+     ]
+}
